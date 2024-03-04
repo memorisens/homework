@@ -1,5 +1,4 @@
 def sum_of_powers(n):
-"""Возвращает сумму степеней 5 и 7 для чисел от 1 до n."""
 sum_5 = 0
 sum_7 = 0
 for i in range(1, n + 1):
@@ -8,24 +7,20 @@ sum_7 += i ** 7
 return sum_5 + sum_7
 
 def sum_of_arithmetic_progression(n):
-"""Возвращает сумму арифметической прогрессии от 1 до n."""
 return n * (n + 1) // 2
 
 def check_equality(n):
-"""Проверяет равенство для данного n."""
 left_side = sum_of_powers(n)
 right_side = 2 * (sum_of_arithmetic_progression(n)) ** 4
 return left_side == right_side
 
 def main():
-"""Проверяет равенство для всех n от 1 до N."""
-N = 10  # Можно изменить это значение для проверки большего количества чисел
-
+N = 10 
 
 for n in range(1, N + 1):
     if check_equality(n):
         print(f"Равенство верно для n = {n}")
     else:
         print(f"Равенство неверно для n = {n}")
-if name == "main":
+if __name__ == "__main__":
 main()
