@@ -1,0 +1,53 @@
+def sum_of_powers(n):
+  """
+  Calculates the sum of the first n powers of 5 and 7.
+
+  Args:
+    n: The number of terms to sum.
+
+  Returns:
+    The sum of the first n powers of 5 and 7.
+  """
+
+  sum_5 = 0
+  sum_7 = 0
+  for i in range(1, n + 1):
+    sum_5 += i**5
+    sum_7 += i**7
+
+  return sum_5 + sum_7
+
+
+def sum_of_squares(n):
+  """
+  Calculates the sum of the first n squares.
+
+  Args:
+    n: The number of terms to sum.
+
+  Returns:
+    The sum of the first n squares.
+  """
+
+  sum = 0
+  for i in range(1, n + 1):
+    sum += i**2
+
+  return sum
+
+
+def main():
+  """
+  Tests the sum_of_powers and sum_of_squares functions.
+  """
+
+  for n in range(1, 11):
+    print(f"n = {n}")
+    print(f"Sum of powers: {sum_of_powers(n)}")
+    print(f"Sum of squares: {sum_of_squares(n)}")
+    print(f"2 * (Sum of squares)^4: {2 * (sum_of_squares(n))**4}")
+    print()
+
+
+if __name__ == "__main__":
+  main()
